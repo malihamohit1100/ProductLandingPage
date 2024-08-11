@@ -1,0 +1,233 @@
+:root{
+    --white: #fafbfc;
+    --text: hsl(228, 12%, 48%);
+    --lavender: rgb(218, 203, 254);
+    --deepPurple: hsl(292, 97%, 27%);
+    --header-text: hsl(212, 21%, 14%);
+}
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--lavender);
+}
+#header-img{
+  width: 60px;
+  object-fit: contain;
+}
+#nav-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--white);
+    padding: 10px;
+    
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+.nav-links a{
+    text-decoration: none;
+    color: var(--text);
+    padding: 0 10px;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+.the-products{
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#email-section{
+    margin-top: 100px;
+}
+
+input{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--deepPurple);
+}
+
+#submit{
+    background-color: var(--deepPurple);
+    color: #fff;
+    cursor: pointer;
+}
+
+section::before{
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+section{
+    margin: 40px 20px;
+    text-align: center;
+}
+h2{
+    font-family: 'fraunces';
+    margin-bottom: 10px;
+}
+
+.icon {
+    color: var(--deepPurple);
+    margin-right: 30px;
+}
+
+#features {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-family: 'Montserrat';
+}   
+#video{
+    width: 100%;
+}
+
+.product-image {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid var(--text);
+}
+
+.product1 {
+    background-image: url(https://thepowermoves.com/wp-content/uploads/2017/11/zero-to-one-resized.jpg);
+}
+.product2 {
+    background-image: url(https://th.bing.com/th/id/R.c5f275fe37dbfc9cb221207d57e81ba5?rik=CKCm66hL1KHkrQ&riu=http%3a%2f%2fecx.images-amazon.com%2fimages%2fI%2f61uDqg7PdoL.jpg&ehk=FoBUCv%2fIp7%2bKnOAH%2fHopv2wUD8Wch8pjsAkk41JDIkw%3d&risl=&pid=ImgRaw&r=0);
+}
+.product3 {
+    background-image: url(https://th.bing.com/th/id/R.c8edcb7e064129a99ed4521c44ecfab7?rik=j1GJF63q%2fW83vw&riu=http%3a%2f%2fd28hgpri8am2if.cloudfront.net%2fbook_images%2fonix%2fcvr9781476791456%2fconfess-9781476791456_hr.jpg&ehk=%2bSfU3TdsFcC7nF2zGi0RkG5%2fpHKJGqJ4GK9COF5Knvs%3d&risl=&pid=ImgRaw&r=0);
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+
+}
+
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.content {
+    font-family: 'Montserrat';
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main-price {
+    margin-right: 20px;
+    font-size: 30px;
+    font-family: fraunces;
+    color: var(--deepPurple);
+
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--text);
+}
+
+.author {
+    font-family: 'Montserrat';
+    letter-spacing: 5px;
+    color: var(--text);
+    text-transform: uppercase;
+}
+.header {
+    font-family: fraunces;
+    margin: 10px 0;
+    color: var(--header-text);
+}
+.add {
+    background-color: var(--deepPurple);
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    color: var(--white);
+    font-family: 'Montserrat';
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 600px){
+    #nav-bar {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (450px < width < 600px){
+    .card {
+        font-size: 0.85rem;
+    }
+    .product-image{
+        height: 400px;
+    }
+}
+
+@media only screen and (450px <= width) {
+    .card {
+       display: flex;
+       max-width: 525px;
+    }
+    .inner-card {
+        width: 400px;
+        padding: 20px;
+    }
+    .product-image{
+        width: 400px;
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+@media only screen and (width >= 1000px) {
+    #video {
+        width: 70%;
+    }
+    .product-cards{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; 
+    }
+}
